@@ -4,6 +4,7 @@
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -18,10 +19,10 @@ export default function Navbar() {
             </a>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <a href="#" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Home</a>
-            <a href="#" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">About</a>
-            <a href="#" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Services</a>
-            <a href="#" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Contact</a>
+            <a href="/" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Home</a>
+            <Link href="/aboutme" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">About</Link>
+            <a href="/" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Services</a>
+            <a href="/" className="text-gray-600 hover:text-rose-500 px-3 py-2 rounded-md text-sm transition duration-150 ease-in-out">Contact</a>
             <button className="bg-rose-100 text-rose-600 hover:bg-rose-200 px-4 py-2 rounded-full text-sm transition duration-150 ease-in-out">
               Get Started
             </button>

@@ -1,8 +1,8 @@
 import Image from "next/image"; 
 import Hero from "./hero/page";
 import Skills from "./skills/page"; 
-import Work from "./work/page";
-import About from "./aboutme/aboutme";
+import Workdisplay from "./components/workdisplay";
+import About from "./aboutme/page";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
         /> */}
         <Hero/>
         <Skills/> 
-        <Work/>
+        <Workdisplay/>
         <About/>
 
       </main>
