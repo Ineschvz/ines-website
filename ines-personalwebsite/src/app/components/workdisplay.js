@@ -53,23 +53,33 @@
 // )
 
 
-// }
+// } 
+
+import Image from "next/image";
+import Link from "next/link";
+
 export default function Workdisplay() {
     const projects = [
         {
             title: "Job 500",
             projectname: "Chavez Concrete",
-            src: "https://www.chavezconcreteworkinc.com/",
+            src: "/ChavezConcrete.jpg",
             description: "This project was conducted to help a small company grow.",
+            href: "https://www.chavezconcreteworkinc.com/"
         },
         {
             title: "Job 2",
             projectname: "Monica Ines Photography",
-            src: "https://www.monicainez.com/",
+            src: "/Monica.jpg",
             description: "This project was conducted to help a Hillsborough local grow.",
+            href:"https://www.monicainez.com/"
         },
         {
             title: "Job 3",
+            projectname: "KubeEst8",
+            src: "/KubeEst8.jpg",
+            description: "This project was for containerizing ",
+            href: "https://kube-est8.vercel.app/"
         },
     ];
 
@@ -87,13 +97,19 @@ export default function Workdisplay() {
                                 {project.title || "Untitled Project"}
                             </h3>
                             {project.src && (
-                                <iframe
-                                    src={project.src}
-                                    title={project.projectname || "Project Preview"}
-                                    className="w-full h-40 mb-4 border rounded"
-                                    loading="lazy"
-                                    style={{ height: "200px" }} // Adjust iframe height as needed
-                                ></iframe>
+
+                                <Link href= {project.href}>
+                              
+                                <Image src= {project.src}
+                                width= {500}
+                                height= {500}
+                                alt = 'image'
+                            
+                                
+                                >
+                                </Image>
+                                
+                                </Link>
                             )}
                             <h4 className="text-md font-medium mb-2">
                                 {project.projectname}
