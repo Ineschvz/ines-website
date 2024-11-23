@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { DynaPuff } from "@next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar"
 
@@ -11,7 +12,11 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
-});
+});  
+
+// const dynaPuff = DynaPuff({ subsets: ['latin'], weight: ['400', '700'] });
+
+const dynaPuff = DynaPuff({ subsets: ['latin'] });
 
 export const metadata = {
   title: "Create Next App",
@@ -22,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dynaPuff.className} antialiased`}
       >
         <Navbar/>
         {children}
