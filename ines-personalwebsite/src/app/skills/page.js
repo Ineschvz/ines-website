@@ -1,5 +1,10 @@
 
 
+import { DynaPuff } from "next/font/google";
+
+
+const dynaPuff = DynaPuff({ subsets: ['latin'] });
+
 export default function Skills () {
     //create an array that will contain each of my skills
 
@@ -12,18 +17,18 @@ export default function Skills () {
 
 return( 
 <div className=""> 
-<div className="">
+<div className={dynaPuff.className}>
     Skills
 </div>
-<div > 
+<div className="grid grid-cols-4 gap-4 items-center justify-center" > 
     Frontend Development 
 
     {frontEnd.map((frontEnd,index) => (
         <div
         key={index}
-        className=""> 
-        <div className="p-6"> </div>
-        <div className="flex items-center justify-center bg-red-300">
+        className="grid flex items-center "> 
+        <div className="grid "> </div>
+        <div className="grid  items-center justify-center bg-red-300">
             {frontEnd}
         </div>
         </div>

@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { DynaPuff } from "@next/font/google";
+import { DynaPuff } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar"
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dynaPuff.className} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar/>
         {children}
