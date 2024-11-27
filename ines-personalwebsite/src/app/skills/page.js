@@ -3,77 +3,67 @@
 import { DynaPuff } from "next/font/google";
 
 
-const dynaPuff = DynaPuff({ subsets: ['latin'] });
+const dynaPuff = DynaPuff({ subsets: ['latin'],  weight: ['400', '700']  });
 
-export default function Skills () {
-    //create an array that will contain each of my skills
+export default function Skills() {
+  const languages = [
+    "TypeScript",
+    "JavaScript",
+    "HTML5",
+    "CSS",
+    "SQL",
+    "NoSQL (MongoDB)"
+  ];
 
-    const frontEnd = ["React", "Next.js", "React Router", "TypeScript", "JavaScript", "HTML5", "CSS", "Redux", "React-Flow"]
+  const frameworksAndTechnologies = [
+    "React",
+    "React Router",
+    "Next.js",
+    "Node.js",
+    "Express",
+    "React-Flow",
+    "Redux",
+    "Puppeteer",
+    "Jest",
+    "Git/GitHub",
+    "Webpack",
+    "Docker",
+    "Kubernetes",
+    "Prometheus",
+    "Grafana"
+  ];
 
-    const backEnd = ["Node.js", "Express", "SQL", "NOSQL" ]
+  return (
+    <div className="mx-auto py-20">
+      <div className={`${dynaPuff.className} text-6xl font-light mx-auto text-center`}>
+        Skills
+      </div>
 
-    const toolingWorkflow = ["Git", "Github", "Docker", "Kubernetes", "Prometheus", "Grafana"]
+      <div className="grid grid-cols-4 gap-6 items-center justify-center mt-12">
+        <h1 className="text-2xl font-light text-rose-500 col-span-4">Languages</h1>
 
+        {languages.map((languages, index) => (
+          <div key={index} className="col-span-1 grid flex items-center">
+            <div className="grid"></div>
+            <div className="grid items-center justify-center bg-red-300 rounded p-4">
+              {languages}
+            </div>
+          </div>
+        ))}
+      </div>
 
-return( 
-<div className=""> 
-<div className={dynaPuff.className}>
-    Skills
-</div>
-<div className="grid grid-cols-4 gap-4 items-center justify-center" > 
-    Frontend Development 
+      <div className="grid grid-cols-4 gap-6 items-center justify-center mt-12">
+        <h1 className="text-2xl font-light text-rose-500 col-span-4">Frameworks and Technologies</h1>
 
-    {frontEnd.map((frontEnd,index) => (
-        <div
-        key={index}
-        className="grid flex items-center "> 
-        <div className="grid "> </div>
-        <div className="grid  items-center justify-center bg-red-300">
-            {frontEnd}
-        </div>
-        </div>
-    )
-    )}  
-</div>
-
-    <div >
-        Backend Development 
-      {backEnd.map((backEnd,index) => (
-        <div
-        key={index}
-        className=""> 
-        <div className="p-6"> </div>
-        <div className="flex items-center justify-center bg-red-300">
-            {backEnd}
-        </div>
-        </div>
-    )
-    )} 
-
+        {frameworksAndTechnologies.map((tech, index) => (
+          <div key={index} className="col-span-1">
+            <div className="p-6"></div>
+            <div className="flex items-center justify-center bg-red-300 rounded p-4">
+              {tech}
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-    <div className=""> 
-        Tooling and Workflow 
-    {toolingWorkflow.map((toolingWorkflow,index) => (
-        <div
-        key={index}
-        className=""> 
-        <div className="p-6"> </div>
-        <div className="flex items-center justify-center bg-red-300">
-            {toolingWorkflow}
-        </div>
-        </div>
-    )
-    )} 
-
-    </div>
-    
-    </div>
-
-
-
-
-)
-
-
-
+  );
 }

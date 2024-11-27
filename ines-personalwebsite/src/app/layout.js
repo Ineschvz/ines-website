@@ -16,7 +16,7 @@ const geistMono = localFont({
 
 // const dynaPuff = DynaPuff({ subsets: ['latin'], weight: ['400', '700'] });
 
-const dynaPuff = DynaPuff({ subsets: ['latin'] });
+
 
 export const metadata = {
   title: "Create Next App",
