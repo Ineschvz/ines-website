@@ -1,15 +1,14 @@
-
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Workdisplay() {
     const projects = [
         {
-            title: "Job 3",
-            projectname: "KubeEst8",
-            src: "/KubeEst8.jpg",
-            description: "This project was for containerizing ",
-            href: "https://kube-est8.vercel.app/"
+            title: "Job 2",
+            projectname: "Monica Ines Photography",
+            src: "/Monica.jpg",
+            description: "This project was conducted to help a Hillsborough local grow.",
+            href:"https://www.monicainez.com/"
         },
         {
             title: "Job 500",
@@ -19,61 +18,67 @@ export default function Workdisplay() {
             href: "https://www.chavezconcreteworkinc.com/"
         },
         {
-            title: "Job 2",
-            projectname: "Monica Ines Photography",
-            src: "/Monica.jpg",
-            description: "This project was conducted to help a Hillsborough local grow.",
-            href:"https://www.monicainez.com/"
+            title: "Job 3",
+            projectname: "KubeEst8",
+            src: "/KubeEst8.jpg",
+            description: "This project was for containerizing ",
+            href: "https://kube-est8.vercel.app/"
         },
     ];
 
     return (
-        <div className="mx-auto py-12 bg-gray-100">
+        <div className="mx-auto py-12">
+            {/* This is the projects section */}
             <h1 className="text-3xl font-semibold text-center mb-6">Projects</h1>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-                <div className="col-span-1 md:col-span-3">
-                    <div
-                        className="bg-red-300 rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
-                        style={{ minHeight: "400px" }} // Adjust height as needed
-                    >
-                        <div className="p-6 flex-grow">
-                            <h3 className="text-lg font-semibold mb-4">
-                                {projects[0].title || "Untitled Project"}
-                            </h3>
-                            {projects[0].src && (
-                                <Link href= {projects[0].href}>
-                                    <Image src= {projects[0].src}
-                                    width= {500}
-                                    height= {500}
-                                    alt = 'image'
-                                    />
-                                </Link>
-                            )}
-                            <h4 className="text-md font-medium mb-2">
-                                {projects[0].projectname}
-                            </h4>
-                            <p className="text-sm text-gray-700">
-                                {projects[0].description}
-                            </p>
-                        </div>
+            {/* This is the projects grid */}
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-4 justify-items-center">
+               {/* This is the first project */}
+                <div
+                    className="bg-transparent border-2 border-orange-500 rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
+                    style={{ minHeight: "400px" }} // Adjust height as needed
+                >
+                    {/* This is the project content */}
+                    <div className="p-6 flex-grow text-center">
+                        <h3 className="text-lg font-semibold mb-4">
+                            {projects[2].title || "Untitled Project"}
+                        </h3>
+                        {projects[2].src && (
+                            <Link href={projects[2].href}>
+                                <Image src={projects[2].src}
+                                width={500}
+                                height={500}
+                                alt='image'
+                                />
+                            </Link>
+                        )}
+                        <h4 className="text-md font-medium mb-2">
+                            {projects[2].projectname}
+                        </h4>
+                        <p className="text-sm text-gray-700">
+                            {projects[2].description}
+                        </p>
                     </div>
                 </div>
-                {projects.slice(1).map((project, index) => (
+            </div>
+            {/* this is the projects grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 justify-items-center">
+                {/* This is the second project */}
+                {projects.slice(0, 2).map((project, index) => (
                     <div
-                        key={index + 1}
-                        className="bg-red-300 rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
+                        key={index}
+                        className="bg-transparent border-2 border-orange-500 rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
                         style={{ minHeight: "400px" }} // Adjust height as needed
                     >
-                        <div className="p-6 flex-grow">
+                        <div className="p-6 flex-grow text-center">
                             <h3 className="text-lg font-semibold mb-4">
                                 {project.title || "Untitled Project"}
                             </h3>
                             {project.src && (
-                                <Link href= {project.href}>
-                                    <Image src= {project.src}
-                                    width= {500}
-                                    height= {500}
-                                    alt = 'image'
+                                <Link href={project.href}>
+                                    <Image src={project.src}
+                                    width={500}
+                                    height={500}
+                                    alt='image'
                                     />
                                 </Link>
                             )}
@@ -90,3 +95,4 @@ export default function Workdisplay() {
         </div>
     );
 }
+
