@@ -27,9 +27,9 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
       <header className="absolute inset-0 flex flex-col justify-center items-center p-4 md:p-8">
-        <div className="max-w-4xl text-center">
+        <div className="max-w-3xl text-center">
           <motion.h1
-            className={`${oldStandardTT.className} text-white font-bold text-4xl md:text-6xl mb-6 leading-tight`}
+            className={`${oldStandardTT.className} text-white font-bold text-5xl md:text-7xl mb-4 leading-tight`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -37,21 +37,18 @@ export default function Hero() {
             Hi, I'm Ines Chavez Vigueras!
           </motion.h1>
           <motion.p
-            className={`${oldStandardTT.className} text-white/90 text-lg md:text-2xl leading-relaxed`}
+            className={`${oldStandardTT.className} text-white/90 text-xl md:text-3xl leading-relaxed`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            I'm a full-stack software engineer and web developer who loves bringing ideas to life on the web. Whether it's through storytelling, smart strategy, or thoughtful design, I'm here to help you create solutions that inspire and make a difference.
+            I'm a <i className="font-italic">full-stack software engineer</i> and <i className="font-italic">web developer</i> who loves bringing <i className="font-italic">ideas</i> to life on the <i className="font-italic">web</i>. Whether it's through <i className="font-italic">storytelling</i>, <i className="font-italic">smart strategy</i>, or <i className="font-italic">thoughtful design</i>, I'm here to help you create <i className="font-italic">solutions</i> that <i className="font-italic">inspire</i> and make a <i className="font-italic">difference</i>.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="mt-8 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-opacity-90 transition-colors duration-300">
-              Explore My Work
-            </button>
           </motion.div>
         </div>
       </header>
