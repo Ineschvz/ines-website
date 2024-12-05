@@ -26,7 +26,7 @@ export default function About() {
           alt="Hola sign"
         />
       </div>
-      <div className="flex-grow">
+      <div className="flex-grow pl-20">
         <h1 className="text-3xl font-semibold mb-6">About Me</h1>
         <p className="text-lg text-gray-600 leading-relaxed">
           Hi, I am Ines, a passionate software engineer with a love for building innovative web applications. My expertise spans various programming languages, and I am always eager to expand my knowledge. When I am not coding, you will find me exploring hiking trails or capturing moments through photography.

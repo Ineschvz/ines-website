@@ -1,70 +1,90 @@
+"use client"
 
-
-import { DynaPuff } from "next/font/google";
-
+import { Inter } from 'next/font/google';
 import Image from "next/image";
+import { motion } from "framer-motion";
 
+const inter = Inter({ subsets: ['latin'] });
 
-const dynaPuff = DynaPuff({ subsets: ['latin'],  weight: ['400', '700']  });
+const languages = [
+  { name: "TypeScript", src: "/ts.png" },
+  { name: "JavaScript", src: "/js.png" },
+  { name: "HTML5", src: "/html5.png" },
+  { name: "CSS", src: "/css.png" },
+  { name: "SQL", src: "/sql.png" },
+  { name: "NoSQL (MongoDB)", src: "/mongodb.png" },
+];
+
+const frameworksAndTechnologies = [
+  "React", "React Router", "Next.js", "Node.js", "Express",
+  "React-Flow", "Redux", "Puppeteer", "Jest", "Git/GitHub",
+  "Webpack", "Docker", "Kubernetes", "Prometheus", "Grafana"
+];
 
 export default function Skills() {
-  const languages = [
-    { name: "TypeScript", src: "/ts.png" },
-    { name: "JavaScript", src: "/js.png" },
-    { name: "HTML5", src: "/html5.png" },
-    { name: "CSS", src: "/css.png" },
-    { name: "SQL", src: "/sql.png" },
-    { name: "NoSQL (MongoDB)", src: "/mongodb.png" },
-  ];
-
-  const frameworksAndTechnologies = [
-    "React",
-    "React Router",
-    "Next.js",
-    "Node.js",
-    "Express",
-    "React-Flow",
-    "Redux",
-    "Puppeteer",
-    "Jest",
-    "Git/GitHub",
-    "Webpack",
-    "Docker",
-    "Kubernetes",
-    "Prometheus",
-    "Grafana"
-  ];
-
   return (
-    <div className="mx-auto py-20">
-      <div className={`${dynaPuff.className} text-6xl font-light mx-auto text-center`}>
+    <motion.section 
+      className={`${inter.className} container mx-auto py-20`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: 0.5 }}
+    >
+      <motion.h2 
+        className="text-4xl font-light text-center mb-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
         Skills
-      </div>
+      </motion.h2>
 
-      <div className="grid grid-cols-4 gap-6 items-center justify-center mt-12">
-        <h1 className="text-2xl font-light text-rose-500 col-span-4">Languages</h1>
+      <SkillSection title="Languages" items={languages} />
+      <SkillSection title="Frameworks and Technologies" items={frameworksAndTechnologies} />
+    </motion.section>
+  );
+}
 
-        {languages.map((language, index) => (
-          <div key={index} className="flex flex-row flex-wrap justify-center gap-6 my-5 w-full">
-            <div className="animate-bounce w-20 h-20 rounded-full p-4 flex items-center justify-center bg-red-300 hover:animate-spin transition duration-150 ease-in-out">
-              <Image src={language.src} alt={language.name} width={64} height={64} />
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="  grid grid-cols-4 gap-6 items-center justify-center mt-12">
-        <h1 className="text-2xl font-light text-rose-500 col-span-4">Frameworks and Technologies</h1>
-
-        {frameworksAndTechnologies.map((tech, index) => (
-          <div key={index} className="flex flex-row flex-wrap justify-center gap-6 my-5 w-full">
-            <div className=" animate-bounce w-16 h-16 rounded-full p-4 flex items-center justify-center bg-red-300 hover:animate-spin transition duration-150 ease-in-out">
-              {tech}
-            </div>
-    
-          </div>
+export function SkillSection({ title, items }) {
+  return (
+    <div className="mb-16">
+      <motion.h3 
+        className="text-2xl font-light text-rose-500 mb-8"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        {title}
+      </motion.h3>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        {items.map((item, index) => (
+          <SkillItem key={index} item={item} index={index} />
         ))}
       </div>
     </div>
   );
 }
+
+export function SkillItem({ item, index }) {
+  return (
+    <motion.div 
+      className="flex justify-center"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3, delay: index * 0.1 }}
+    >
+      <motion.div 
+        className="w-20 h-20 rounded-full bg-rose-100 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow duration-300"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+      >
+        {typeof item === 'string' ? (
+          <span className="text-sm font-medium text-rose-700 text-center px-2">{item}</span>
+        ) : (
+          <Image src={item.src} alt={item.name} width={40} height={40} />
+        )}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+
