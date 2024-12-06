@@ -10,7 +10,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-rose-50 shadow-sm px-4 py-2">
+    <nav className="bg-rose-100 shadow-sm px-4 py-2">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <a href="/" className="text-rose-600 text-lg font-semibold">

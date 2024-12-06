@@ -1,11 +1,9 @@
 "use client"
 
-import { Inter } from 'next/font/google';
+import { Old_Standard_TT } from 'next/font/google';
 import Image from "next/image";
 import { motion } from "framer-motion";
-
-const inter = Inter({ subsets: ['latin'] });
-
+const oldStandardTT = Old_Standard_TT({ subsets: ['latin'], weight: ['400', '700'] });
 const languages = [
   { name: "TypeScript", src: "/ts.png" },
   { name: "JavaScript", src: "/js.png" },
@@ -14,7 +12,6 @@ const languages = [
   { name: "SQL", src: "/sql.png" },
   { name: "NoSQL (MongoDB)", src: "/mongodb.png" },
 ];
-
 const frameworksAndTechnologies = [
   "React", "React Router", "Next.js", "Node.js", "Express",
   "React-Flow", "Redux", "Puppeteer", "Jest", "Git/GitHub",
@@ -24,13 +21,13 @@ const frameworksAndTechnologies = [
 export default function Skills() {
   return (
     <motion.section 
-      className={`${inter.className} container mx-auto py-20`}
+      className={`${oldStandardTT.className} container mx-auto py-20`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
     >
       <motion.h2 
-        className="text-4xl font-light text-center mb-12"
+        className="text-5xl font-bold text-green-900 text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -86,5 +83,4 @@ export function SkillItem({ item, index }) {
     </motion.div>
   );
 }
-
 
