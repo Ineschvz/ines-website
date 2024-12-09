@@ -28,7 +28,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/30" />
       <header className="absolute inset-0 flex flex-col justify-center items-center p-4 md:p-8">
-        <div className="max-w-3xl text-center">
+        <div className="absolute  max-w-3xl text-center">
           <motion.div
             className="flex flex-wrap justify-center"
             initial={{ opacity: 0 }}
@@ -47,14 +47,14 @@ export default function Hero() {
               </motion.span>
             ))}
           </motion.div>
-          <motion.p
+          {/* <motion.p
             className={`${oldStandardTT.className} text-white/90 text-xl md:text-3xl leading-relaxed`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             I'm a <i className="font-italic">full-stack software engineer</i> and <i className="font-italic">web developer</i> who loves bringing <i className="font-italic">ideas</i> to life on the <i className="font-italic">web</i>. Whether it's through <i className="font-italic">storytelling</i>, <i className="font-italic">smart strategy</i>, or <i className="font-italic">thoughtful design</i>, I'm here to help you create <i className="font-italic">solutions</i> that <i className="font-italic">inspire</i> and make a <i className="font-italic">difference</i>.
-          </motion.p>
+          </motion.p> */}
           <motion.div
             className="flex justify-center space-x-4"
             initial={{ opacity: 0, y: 20 }}

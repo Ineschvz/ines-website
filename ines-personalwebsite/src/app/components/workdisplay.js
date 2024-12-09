@@ -32,14 +32,14 @@ export default function Workdisplay() {
 
     return (
         <div className={`mx-auto py-12 space-y-12 ${bodoniModa.className} ${oldStandardTT.className}`}>
-            <h1 className="text-3xl font-semibold text-center mb-6">Projects</h1>
+            <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-4 justify-items-center">
                 <div
                     className="bg-transparent border-2 border-orange-500 rounded-lg shadow-md overflow-hidden flex flex-col justify-between"
                     style={{ minHeight: "400px" }}
                 >
                     <div className="p-6 flex-grow text-center">
-                        <h3 className="text-lg font-semibold mb-4">
+                        <h3 className="text-2xl font-semibold mb-4 text-green-900">
                             {projects[2].title || "Untitled Project"}
                         </h3>
                         {projects[2].src && (
@@ -51,10 +51,10 @@ export default function Workdisplay() {
                                 />
                             </Link>
                         )}
-                        <h4 className="text-md font-medium mb-2">
+                        <h4 className="text-xl font-medium mb-2 text-green-900">
                             {projects[2].projectname}
                         </h4>
-                        <p className="text-sm text-gray-700">
+                        <p className="text-lg text-green-900">
                             {projects[2].description}
                         </p>
                     </div>
@@ -68,7 +68,7 @@ export default function Workdisplay() {
                         style={{ minHeight: "400px" }}
                     >
                         <div className="p-6 flex-grow text-center">
-                            <h3 className="text-lg font-semibold mb-4">
+                            <h3 className="text-2xl font-semibold mb-4 text-green-900">
                                 {project.title || "Untitled Project"}
                             </h3>
                             {project.src && (
@@ -80,10 +80,10 @@ export default function Workdisplay() {
                                     />
                                 </Link>
                             )}
-                            <h4 className="text-md font-medium mb-2">
+                            <h4 className="text-xl font-medium mb-2 text-green-900">
                                 {project.projectname}
                             </h4>
-                            <p className="text-sm text-gray-700">
+                            <p className="text-lg text-green-900">
                                 {project.description}
                             </p>
                         </div>
