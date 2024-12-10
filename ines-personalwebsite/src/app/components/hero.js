@@ -16,7 +16,7 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative h-screen w-screen container">
+    <div className="relative w-screen h-screen">
       <Image
         src="/InesTyping.jpg"
         fill

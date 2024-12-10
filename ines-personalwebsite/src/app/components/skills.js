@@ -13,11 +13,25 @@ const languages = [
   { name: "NoSQL (MongoDB)", src: "/mongodb.png" },
 ];
 const frameworksAndTechnologies = [
-  "React", "React Router", "Next.js", "Node.js", "Express",
-  "React-Flow", "Redux", "Puppeteer", "Jest", "Git/GitHub",
-  "Webpack", "Docker", "Kubernetes", "Prometheus", "Grafana"
+  {name:" React", src:"/reactjs.png"},
+  {name:" Next.js", src:"/next.svg"},
+  {name:" Node.js", src:"/nodejs.png"},
+  {name:" Express", src:"/express.png"},
+  {name:" React-Flow", src:"/reactflow.png"},
+  {name:" Redux", src:"/redux.png"},
+  {name:" Puppeteer", src:"/puppeteer.png"},
+  {name:" Jest", src:"/jest.png"},
+  {name:" Git/GitHub", src:"/Git.png"},
+  {name:" Webpack", src:"/webpack.png"},
+  {name:" Docker", src:"/docker.png"},
+  {name:" Kubernetes", src:"/kubernetes.png"},
+  {name:" Prometheus", src:"/prometheus.png"},
+  {name:" Grafana", src:"/grafana.png"},
 ];
 
+// "React", "React Router", "Next.js", "Node.js", "Express",
+// "React-Flow", "Redux", "Puppeteer", "Jest", "Git/GitHub",
+// "Webpack", "Docker", "Kubernetes", "Prometheus", "Grafana"
 export default function Skills() {
   return (
     <motion.section 
