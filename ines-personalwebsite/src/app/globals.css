@@ -10,6 +10,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
+    font-family: 'IvyStyle Sans Regular', ivypresto, sans-serif;
+    
     --background: #fef2f2;
     --foreground: #2c2b2b;
   }

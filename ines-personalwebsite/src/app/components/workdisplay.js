@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Bodoni_Moda_SC, Old_Standard_TT } from "next/font/google";
 
-const bodoniModa = Bodoni_Moda_SC({ subsets: ['latin'], weight: ['400', '700'] });
+
 const oldStandardTT = Old_Standard_TT({ subsets: ['latin'], weight: ['400', '700'] });
 
 export default function Workdisplay() {
@@ -31,7 +31,7 @@ export default function Workdisplay() {
     ];
 
     return (
-        <div className={`mx-auto py-12 space-y-12 ${bodoniModa.className} ${oldStandardTT.className}`}>
+        <div className="mx-auto py-12 space-y-12 font-[ivyPresto]">
             <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
             <div className="grid grid-cols-1 md:grid-cols-1 gap-6 px-4 justify-items-center">
                 <div

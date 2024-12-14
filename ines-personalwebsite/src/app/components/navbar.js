@@ -23,11 +23,9 @@ export default function Navbar() {
         <div className="hidden md:flex items-center space-x-12">
           <Link href="/" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>Home</Link>
           <Link href="/about" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>About</Link>
-          <a href="/" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>Services</a>
+          <a href="/work" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>Services</a>
           <a href="/contact" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>Contact</a>
-          <button className={`bg-rose-100 text-green-900 hover:bg-rose-200 px-4 py-2 rounded-full text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>
-            Get Started
-          </button>
+    
         </div>
         <div className="md:hidden flex items-center">
           <button
@@ -48,10 +46,8 @@ export default function Navbar() {
             <Link href="/" className={`text-green-900 hover:text-rose-500 block px-3 py-2 rounded-md text-xl ${oldStandardTT.className}`}>Home</Link>
             <Link href="/aboutme" className={`text-green-900 hover:text-rose-500 block px-3 py-2 rounded-md text-xl ${oldStandardTT.className}`}>About</Link>
             <a href="/" className={`text-green-900 hover:text-rose-500 block px-3 py-b rounded-md text-xl ${oldStandardTT.className}`}>Services</a>
-            <a href="/" className={`text-green-900 hover:text-rose-500 block px-3 py-2 rounded-md text-xl ${oldStandardTT.className}`}>Contact</a>
-            <button className={`bg-rose-100 text-green-900 hover:bg-rose-200 block w-full text-left px-3 py-2 rounded-md text-xl ${oldStandardTT.className}`}>
-              Get Started
-            </button>
+            <a href="/contact" className={`text-green-900 hover:text-rose-500 block px-3 py-2 rounded-md text-xl ${oldStandardTT.className}`}>Contact</a>
+          
           </div>
         </div>
       )}
