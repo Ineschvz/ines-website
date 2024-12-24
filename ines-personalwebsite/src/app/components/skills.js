@@ -15,9 +15,9 @@ const languages = [
 const frameworksAndTechnologies = [
   {name:" React", src:"/reactjs.png"},
   {name:" Next.js", src:"/next.svg"},
-  {name:" Node.js", src:"/nodejs.png"},
+  {name:" Node.js", src:"/node.png"},
   {name:" Express", src:"/express.png"},
-  {name:" React-Flow", src:"/reactflow.png"},
+  {name:" React-Flow", src:"/reactflow1.png"},
   {name:" Redux", src:"/redux.png"},
   {name:" Puppeteer", src:"/puppeteer.png"},
   {name:" Jest", src:"/jest.png"},
@@ -29,13 +29,11 @@ const frameworksAndTechnologies = [
   {name:" Grafana", src:"/grafana.png"},
 ];
 
-// "React", "React Router", "Next.js", "Node.js", "Express",
-// "React-Flow", "Redux", "Puppeteer", "Jest", "Git/GitHub",
-// "Webpack", "Docker", "Kubernetes", "Prometheus", "Grafana"
+
 export default function Skills() {
   return (
     <motion.section 
-      className={`${oldStandardTT.className} container mx-auto py-20`}
+      className={`font-[ivyPresto] container mx-auto py-20`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
