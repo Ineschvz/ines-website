@@ -2,7 +2,7 @@ import Image from "next/image";
 import Hero from "./components/hero";
 import Skills from "./components/skills"; 
 import Workdisplay from "./components/workdisplay";
-import About from "./components/aboutme"; 
+import About from "./components/about"; 
 
 export default function Home() {
   return (
@@ -12,7 +12,9 @@ export default function Home() {
         <Hero/>
         <Skills/> 
         <Workdisplay/>
-        <About/>
+        <section className="py-20" id="about">
+          <About/>
+        </section>
 
       </main>
   
