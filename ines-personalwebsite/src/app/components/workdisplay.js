@@ -7,11 +7,12 @@ const oldStandardTT = Old_Standard_TT({ subsets: ['latin'], weight: ['400', '700
 
 export default function Workdisplay() {
     const projects = [
+      
         {
-            title: "Monica Ines Photography",
-            src: "/Monica.jpg",
-            description: "Website was designed for a local Hilsborough photographer to show case her work and services.",
-            href: "https://www.monicainez.com/"
+            title: "KubeEst8",
+            src: "/KubeEst8.jpg",
+            description: "KubeEst8 is a React-based Kubernetes monitoring app featuring reusable components, real-time node graphs, and dynamic dashboards, integrating Prometheus and Grafana to enhance observability, performance, and scalability ",
+            href: "https://kube-est8.vercel.app/"
         },
         {
             title: "Chavez Concrete",
@@ -20,55 +21,60 @@ export default function Workdisplay() {
             href: "https://www.chavezconcreteworkinc.com/"
         },
         {
-            title: "KubeEst8",
-            src: "/KubeEst8.jpg",
-            description: "KubeEst8 is a React-based Kubernetes monitoring app featuring reusable components, real-time node graphs, and dynamic dashboards, integrating Prometheus and Grafana to enhance observability, performance, and scalability ",
-            href: "https://kube-est8.vercel.app/"
+            title: "Monica Ines Photography",
+            src: "/Monica.jpg",
+            description: "Website was designed for a local Hilsborough photographer to show case her work and services. ",
+            href: "https://www.monicainez.com/"
         },
     ];
 
     return (
-        <div className="mx-auto py-12 space-y-12 font-[ivyPresto]">
-            <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
-            <div className="flex justify-between space-x-12">
-                <div>
-                    <h2>Latest Work</h2>
-                    <Link href="/projects">
-                        <button className="bg-green-900 text-white px-4 py-2 rounded-md hover:bg-green-700">
-                            View All Projects
-                        </button>
-                    </Link>
-                </div>
-                <div>
-                    <h2>Previous Work</h2>
-                    {projects.map((project, index) => (
-                        <div key={index} className="mb-8">
-                            <h3 className="text-2xl font-semibold mb-4 text-green-900 text-center">
-                                {project.title || "Untitled Project"}
-                            </h3>
-                            <div className="flex items-center justify-between">
-                                {project.src && (
-                                    <Link href={project.href}>
-                                        <div className="flex items-center justify-center text-center">
-                                            <Image src={project.src}
-                                                width={500}
-                                                height={500}
-                                                alt='project image'
-                                                className="mx-auto"
-                                            />
-                                        </div>
-                                    </Link>
-                                )}
-                                <p className="text-lg text-green-900">
-                                    {project.description}
-                                </p>
+        <div className="mx-auto py-12 px-8 space-y-12 font-[ivyPresto]">
+            <div className="bg-orange-200/25 py-12 rounded-md">
+                <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
+                <div className="grid grid-cols-2 gap-12">
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-center mb-4 font-semibold text-3xl text-green-900 ">Latest Work</h2>
+                        <Link href="/work">
+                            <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-green-700 mt-4 hover:shadow-md hover:shadow-orange-500/75 transition-shadow duration-300">
+                                View All Projects
+                            </button>
+                        </Link>
+                    </div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="text-center mb-4 font-semibold text-3xl text-green-900">Previous Work</h2>
+                        {projects.map((project, index) => (
+                            <div key={index} className="mb-8 px-4 py-6 border border-gray-300 rounded-lg shadow-lg">
+                                <h3 className="text-2xl font-semibold mb-4 text-green-900 text-center">
+                                    {project.title || "Untitled Project"}
+                                </h3>
+                                <div className="flex items-center justify-between space-x-4">
+                                    {project.src && (
+                                        <Link href={project.href}>
+                                            <div className="flex items-center justify-center text-center">
+                                                <Image src={project.src}
+                                                    width={500}
+                                                    height={500}
+                                                    alt='project image'
+                                                    className="mx-auto"
+                                                />
+                                            </div>
+                                        </Link>
+                                    )}
+                                    <p className="text-lg text-green-900">
+                                        {project.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-
+                        ))}
+                        <Link href="/work">
+                            <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-green-700 mt-4">
+                                View More Projects
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
-            
         </div>
     );
 }
