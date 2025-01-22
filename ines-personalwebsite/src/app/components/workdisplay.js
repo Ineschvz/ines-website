@@ -29,46 +29,45 @@ export default function Workdisplay() {
     ];
 
     return (
-        <div className="mx-auto py-12 px-8 space-y-12 font-[ivyPresto]">
-            <div className="bg-orange-200/25 py-12 rounded-md">
+        <div className="mx-auto py-12 px-16 md:px-32 space-y-12 font-[ivyPresto]">
+            <div className="bg-orange-200/25 py-12 rounded-3xl">
                 <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
                 <div className="grid grid-cols-2 gap-12">
                     <div className="flex flex-col items-center">
                         <h2 className="text-center mb-4 font-semibold text-3xl text-green-900 ">Latest Work</h2>
                         <Link href="/work">
-                            <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-green-700 mt-4 hover:shadow-md hover:shadow-orange-500/75 transition-shadow duration-300">
+                            <button className="bg-orange-600/25 text-green-900 px-4 py-2 rounded-md mt-4 transition duration-300 ease-in-out transform hover:scale-105"
+                            >
                                 View All Projects
                             </button>
                         </Link>
                     </div>
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center  md:px-12 space-y-12 ">
                         <h2 className="text-center mb-4 font-semibold text-3xl text-green-900">Previous Work</h2>
                         {projects.map((project, index) => (
                             <div key={index} className="mb-8 px-4 py-6 border border-gray-300 rounded-lg shadow-lg">
                                 <h3 className="text-2xl font-semibold mb-4 text-green-900 text-center">
                                     {project.title || "Untitled Project"}
                                 </h3>
-                                <div className="flex items-center justify-between space-x-4">
+                                <div className="flex flex-col items-center space-y-4">
                                     {project.src && (
                                         <Link href={project.href}>
-                                            <div className="flex items-center justify-center text-center">
-                                                <Image src={project.src}
-                                                    width={500}
-                                                    height={500}
-                                                    alt='project image'
-                                                    className="mx-auto"
-                                                />
-                                            </div>
+                                            <Image src={project.src}
+                                                width={500}
+                                                height={500}
+                                                alt='project image'
+                                                className="mx-auto"
+                                            />
                                         </Link>
                                     )}
-                                    <p className="text-lg text-green-900">
+                                    <p className="text-lg text-green-900 mt-4">
                                         {project.description}
                                     </p>
                                 </div>
                             </div>
                         ))}
                         <Link href="/work">
-                            <button className="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-green-700 mt-4">
+                            <button className="bg-orange-600/25 text-green-900 px-4 py-2 rounded-md mt-4 transition duration-300 ease-in-out transform hover:scale-105">
                                 View More Projects
                             </button>
                         </Link>

@@ -13,12 +13,13 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="bg-rose-100 shadow-sm px-4 py-2">
+    <nav className=" shadow-sm px-4 py-2">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <a href="/" className="text-green-900 text-xl font-semibold">
-            <Image src="/ines-logo.png" alt="ines Logo" width={75} height={45} className=" rounded-full" />
-          </a>
+          <Image src="/ines-logo.png" alt="ines Logo" width={75} height={45} className="rounded-full mr-2" />
+          <Link href="/" className={`text-green-900 text-xl font-semibold ${oldStandardTT.className}`}>
+            Ines Chavez Vigueras 
+          </Link>
         </div>
         <div className="hidden md:flex items-center space-x-12">
           <Link href="/" className={`text-green-900 hover:text-rose-500 px-3 py-2 rounded-md text-xl transition duration-150 ease-in-out ${oldStandardTT.className}`}>Home</Link>
