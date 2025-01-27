@@ -69,5 +69,9 @@ export default function ProjectCard() {
       ))}
     </div>
   );
-}
+} 
+
+
+//refactor this component!!! 
+//make then into individual divs keep website static 
 
