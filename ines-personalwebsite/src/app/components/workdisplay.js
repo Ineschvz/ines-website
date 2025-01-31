@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Bodoni_Moda_SC, Old_Standard_TT } from "next/font/google";
-import ProjectCard from "./projectcard";
 import { FaGithub, FaGlobe } from 'react-icons/fa';
 
 
@@ -28,6 +27,14 @@ export default function Workdisplay() {
             description: "Website was designed for a local Hilsborough photographer to show case her work and services. ",
             href: "https://www.monicainez.com/"
         },
+        {
+          title: "TimeWise - Schedule Optimization Application",
+      },
+      {
+        title: "Snaps - AI-Powered Article Summary Tool",
+
+    },
+
 
     ];
 
@@ -79,10 +86,11 @@ export default function Workdisplay() {
                 <h1 className="text-5xl font-bold text-green-900 text-center mb-12">Projects</h1>
                 
                    
-                    <div className="flex flex-col items-center md:px-12 space-y-12 border border-red-300 rounded-lg shadow-lg ">
+                    <div className="flex flex-col items-center md:px-0 pt-12 pb-12 space-y-12 rounded-lg  ">
                 
                         {projects.map((project, index) => (
-                            <div key={index} className="mb-8 px-4 py-6 border border-gray-300 rounded-lg shadow-lg">
+                            <div key={index} className="mb-8 px-0 py-6 rounded-lg shadow-lg">
+                
                                 <h3 className="text-2xl font-semibold mb-4 text-green-900 text-center">
                                     {project.title || "Untitled Project"}
                                 </h3>
@@ -98,7 +106,7 @@ export default function Workdisplay() {
                                         </Link>
                                     )}
                                     {/* This isn't working because we're trying to access the description property of projectProps, which is an array of objects. We need to access the description property of the specific object in the array that corresponds to the current project. We can do this by using the index of the current project to access the correct object in the array. */}
-                                    <p className="text-lg text-green-900 mt-4">
+                                    <p className="text-lg text-green-900 mt-4 text-center">
                                         {projectProps[index].description}
                                     </p>
                                     <p className="text-xl font-medium">
@@ -121,11 +129,7 @@ export default function Workdisplay() {
                                 </div>
                             </div>
                         ))}
-                        <Link href="/work">
-                            <button className="bg-orange-600/25 text-green-900 px-4 py-2 rounded-md mt-4 transition duration-300 ease-in-out transform hover:scale-105">
-                                View More Projects
-                            </button>
-                        </Link>
+                      
                     </div>
                 
             </div>

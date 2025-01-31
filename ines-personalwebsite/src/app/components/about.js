@@ -4,16 +4,16 @@ import {motion} from "framer-motion"
 
 export default function About() {
   return (
-    <div className="font-[ivyPresto] py-12 space-y-12">
+    <div className="font-[ivyPresto] py-12 space-y-12 border border-red-300">
      <motion.h1
-          className="text-5xl font-bold text-green-900 text-center mb-12"
+          className="text-5xl font-bold text-green-900 text-center mb-12 pb-4"
           initial={{ opacity: 0 }}
           whileInView={{
             opacity: 1,
             transition: {
-              duration: 1,
+              duration: 2,
               ease: "easeInOut",
-              staggerChildren: 0.02,
+              staggerChildren: 0.05,
             },
           }}
           viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function About() {
               key={index}
               initial={{ opacity: 0, y: 20, scale: 0.8 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.5, delay: index * 0.02 }}
+              transition={{ duration: 1.5, delay: index * 0.05, ease: "easeInOut" }}
               whileHover={{ scale: 1.2 }}
             >
               {char}
