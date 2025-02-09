@@ -27,7 +27,7 @@ export default function About() {
               transition={{ duration: 1.5, delay: index * 0.05, ease: "easeInOut" }}
               whileHover={{ scale: 1.2 }}
             >
-              {char}
+              {typeof char === "string" ? char : <span key={index}>{char}</span>}
             </motion.span>
           ))}
         </motion.h1>
