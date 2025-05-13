@@ -4,7 +4,6 @@ import React, {FormEvet} from 'react';
 import { useState } from 'react';
 
 
-//creating the form component that will be used in the contact page
 
 export default function Form() {    
 
