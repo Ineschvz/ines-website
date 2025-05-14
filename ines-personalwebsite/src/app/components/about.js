@@ -5,32 +5,24 @@ import {motion} from "framer-motion"
 export default function About() {
   return (
     <div className="font-[ivyPresto] py-12 space-y-12 border border-red-300">
-     <motion.h1
-          className="text-5xl font-bold text-green-900 text-center mb-12 pb-4"
-          initial={{ opacity: 0 }}
-          whileInView={{
-            opacity: 1,
-            transition: {
-              duration: 2,
-              ease: "easeInOut",
-              staggerChildren: 0.05,
-            },
-          }}
-          viewport={{ once: true }}
-          style={{ scrollMarginTop: "100px" }}
-        >
-          {["W", "h", "o", " ", "i", "s", " ", <span key="ines" className="text-orange-600/90">Ines</span>, "?"].map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, y: 20, scale: 0.8 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1.5, delay: index * 0.05, ease: "easeInOut" }}
-              whileHover={{ scale: 1.2 }}
-            >
-              {typeof char === "string" ? char : <span key={index}>{char}</span>}
-            </motion.span>
-          ))}
-        </motion.h1>
+       <motion.div
+                  className="flex flex-wrap justify-center "
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  {'HELLO! I am Ines'.split('  ').map((word, index) => (
+                    <motion.span
+                      key={index}
+                      className={`text-orange-600/90 font-bold text-5xl md:text-7xl mb-4 leading-tight`}
+                      initial={{ opacity: 0, x: -100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.8, delay: index * 0.1 }}
+                    >
+                      {word}
+                    </motion.span>
+                  ))}
+                </motion.div>
       <div className="container mx-auto px-4 py-12 max-w-4xl flex flex-row gap-8 mb-12">
       <div className="relative w-64 h-80 flex-shrink-0 ">
         <Image
@@ -66,3 +58,30 @@ export default function About() {
   )
 }
 
+
+{/* <motion.h1
+className="text-5xl font-bold text-green-900 text-center mb-12 pb-4"
+initial={{ opacity: 0 }}
+whileInView={{
+  opacity: 1,
+  transition: {
+    duration: 2,
+    ease: "easeInOut",
+    staggerChildren: 0.05,
+  },
+}}
+viewport={{ once: true }}
+style={{ scrollMarginTop: "100px" }}
+>
+{["W", "h", "o", " ", "i", "s", " ", <span key="ines" className="text-orange-600/90">Ines</span>, "?"].map((char, index) => (
+  <motion.span
+    key={index}
+    initial={{ opacity: 0, y: 20, scale: 0.8 }}
+    animate={{ opacity: 1, y: 0, scale: 1 }}
+    transition={{ duration: 1.5, delay: index * 0.05, ease: "easeInOut" }}
+    whileHover={{ scale: 1.2 }}
+  >
+    {typeof char === "string" ? char : <span key={index}>{char}</span>}
+  </motion.span>
+))}
+</motion.h1> */}
