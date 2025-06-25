@@ -12,7 +12,7 @@ export default function Home() {
         <Hero/>
         <Skills/> 
         <Workdisplay/>
-        <section className="py-20" id="about">
+        <section className="" id="about">
           <About/>
         </section>
 

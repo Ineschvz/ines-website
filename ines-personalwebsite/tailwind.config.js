@@ -11,7 +11,17 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      keyframes: {
+        typing: {
+          '0%': { width: '0%' },
+          '100%': { width: '100%' },
+        },
+      },
+      animation: {
+        typing: 'typing 2s steps(20) infinite',
+      },
     },
   },
   plugins: [],
 };
+
